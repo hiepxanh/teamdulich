@@ -1,0 +1,126 @@
+
+.container-header{
+	width: 100%;
+}
+.textheader{
+	z-index: 100;
+	position: absolute;
+	color: white;
+	font-size: 90px;
+	font-weight: bold;
+	left: 500px;
+	top: 450px;
+}
+.imageheader{
+	width: 100%;
+}
+.main-menu{
+	width: 100%;
+	height: 70px;
+	background-color: black;
+}
+ul{
+	margin-top: 0px;
+}
+.category{
+	display: inline-block;
+	margin-top: 25px;
+}
+#first{
+	margin-left: 350px;
+}
+#main-menu-category{
+	text-decoration: none; 
+	color: white;
+	font-size: 20px;
+	vertical-align: baseline;
+}
+.category-name {
+	font-size: 60px;
+	text-decoration: none;
+}
+#am-thuc-duong-pho{
+	margin-top: 20px;
+	margin-left: 15px;
+	width: 75%;
+	height:auto;
+}
+.name{
+	text-decoration: none;
+	color: black;
+	font-size: 30px;
+}
+.right-column{
+	float: right;
+	width: 33%;
+	height: auto;
+	
+}
+.left-column{
+	width: 67%;
+	float: right;
+	height: auto;
+}
+.clear1{
+	float: close;
+}
+.big-image{
+	width: 80%;
+}
+.main-title{
+	width:80%;
+}
+h3{
+	font-size: 25px;
+	margin-top: 10px;
+}
+.side-image{
+	width: 75%;
+}
+.side-title{
+	width:75%;
+}
+h5{
+	font-size: 15px;
+	margin-top: 5px;
+}
+.chapeau{
+	font-size: 14px;
+}
+#chapeau{
+	width: 80%;
+}
+#am-thuc-truyen-thong{
+	margin-top: 40px;
+	margin-left: 15px;
+	width: 75%;
+	height: auto;
+}
+#mon-ngon-bon-phuong{
+	margin-top: 40px;
+	margin-left: 15px;
+	width: 75%;
+	height: auto;
+}
+hr{
+	display: block;
+    margin-left: 15px;
+    border-style: inset;
+    border-width: 1px;
+	width:75%
+}
+.clear{
+	clear: both;
+}
+.footer{
+	width: 100%;
+	background-color: black;
+	height: 70px;
+}
+.text-footer{
+	margin-top:0px;
+	padding-top: 20px;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+}
