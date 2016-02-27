@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment  6</title>
+    <link rel="stylesheet" href="./index.css"/>
+	<style>p.outset {border-style: outset;}</style>
+	<script src="../static/js/jquery-1.12.0.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="header">
+		<div class = "header_menu">
+			<button class="header_menu_button">YOUR MENU</button>
+			  <div class="header_menu-content">
+				<a href="#">Ẩm thực đường phố</a>
+				<a href="#">Ẩm thực truyền thống</a>
+				<a href="#">Món ngon bốn phương</a>
+			  </div>
+		</div>
+		<div class="header_logo">
+			<img src="./imgs/logo.png" alt=""></img>
+		</div>
+		<div  class="header_slogan">
+				<p>C4E.2 - Code for everyone</p>
+		</div>
+		<div class="header_search" id="abc">
+				<img src="./imgs/search.png"/>
+				<div class="header_search_frame">
+					<input id="Search" type ="text"/>
+				</div>
+		</div>
+	</div>
+	<div class="banner">
+		<img src="./imgs/mocchau1.jpg"/>
+	</div>
+	<div class="collection" >
+		<div class="collection_1">
+			<a> <font  font face="Palatino Linotype" color="#E0EEE0">Ẩm thực đường phố</font>  </a>
+		</div>
+		<div class="collection_2">
+			<a> <font  font face="Palatino Linotype" color="#E0EEE0">Ẩm thực truyền thống</font>  </a>
+		</div>
+		<div class="collection_3">
+			<a> <font  font face="Palatino Linotype" color="#E0EEE0">Món ngon bốn phương</font>  </a>
+		</div>
+	</div>
+	<div class="body_1">
+		<div class="news">
+			<div class="news_title">
+				<div class="news_name">
+					<h1>{{ Article.title }} </h1>
+				</div>
+				<div class="news_info">
+					<p>Infomation</p>
+					<ul>
+						<li>Authors</li>
+						<li>Time Post</li>
+						<li>Source</li>
+					</ul>
+				</div>
+			</div>
+			<div class="news_main">
+					<div class="news_main_left">
+						<div style="square" class="news_img">
+							<img src="http://megafun.vn/dataimages/201205/original/images722954_Che_2.jpg"></img>
+						</div>
+						<div style="square" class="news_content">
+
+                            {{Article.content | safe}}
+
+						</div>
+					</div>
+					<div class="news_main_right">
+						<div class="news_relate">
+							<a href="#abc">
+								<div class="news_relate_1" >
+										<div target="_blank" >
+											<img src="./imgs/logo.jpg" alt=/"" ></img>
+										 </div>
+										<p>Kinh nghiệm đi chơi Mộc Châu</p>
+									</div>
+							</a>
+							<a href="http://www.dantri.com.vn" target="_blank">
+								<div class="news_relate_1" >
+									<div target="_blank" >
+										<img src="./imgs/logo.jpg" alt=/"" ></img>
+									 </div>
+									<p>Nhà nghỉ Mộc Châu</p>
+								</div>
+							</a>
+							<a>
+								<div class="news_relate_1">
+									<div>
+										<img src="../static/imgs/logo.jpg" alt=/"" ></img>
+									 </div>
+										<p>Mộc Châu - Tình tứ với Gấu !!!</p>
+								</div>
+							</a>
+						</div>
+					</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="column1">
+			<p> HOME </p>
+			<ul>
+				<div> MY COMPANY </div>
+				<div> MY FAMILY </div>
+				<div> MY GIRL-FRIEND </div>
+			</ul>
+		</div>
+		<div class="column1">
+			<p>ABOUT US</p>
+			<ul>
+				<div> CÔNG TY CỔ PHẦN ẨM THỰC C4E </div>
+				<div> INFOMATION </div>
+				<div> BANK ACCOUNT </div>
+			</ul>
+		</div>
+		<div class="column1">
+			<p>HELP</p>
+			<ul>
+				<div> Call: 0975.62.62.96 </div>
+				<div>  SMS: 0128.728.75.74 </div>
+				<div>  HẸN TRƯỚC: 0918.189.207 </div>
+			</ul>
+		</div>
+		<div class="column4">
+			<p>FOLLOW US</p>
+			<ul>
+				<a href="http://facebook.vn/p.k.quyen.anh"><img src="./imgs/facebook.png" ></img></a>
+				<img src="./imgs/youtube.png"></img>
+				<img src="./imgs/twitter.png"></img>
+			</ul>
+		</div>
+	</div>
+	<div class="my-company">
+		<div class="my-company_name"> CÔNG TY CỔ PHẦN ẨM THỰC C4E </div>
+		<p>© 2014 Condé Nast. All rights reserved.</p>
+		<p>Use of this site constitutes acceptance of our User Agreement (effective 1/2/14) and Privacy Policy (effective 1/2/14).</p>
+		<p>Your California Privacy Rights</p>
+		<p>The material on this site may not be reproduced, distributed, transmitted, cached or otherwise used, except with the prior written permission of Condé Nast.</p>
+	</div>
+
+
+</body>
+</html>

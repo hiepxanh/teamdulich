@@ -1,0 +1,11 @@
+1. Use "layout_design.png" to create a HTML page.
+2. Use provided resources 
+
+
+
+
+Yellow: #E6D26C
+Gray: #666666
+Dark Green: #A3BD7E
+Light Green: #C6D59C
+Very Light Green: #CFDDBD
