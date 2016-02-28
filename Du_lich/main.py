@@ -76,7 +76,8 @@ if __name__ == '__main__':
         post_dict = {
             "title" : title,
             "content" : post_content,
-            "image" : first_img
+            "image" : first_img,
+            "category": "duong pho"
         }
         post_contents.append(post_dict)
         i= i + 1

@@ -7,6 +7,7 @@ class Article:
         self.content = _content
         self.image = _image
 
+
 app = Flask(__name__)
 
 @app.route('/<path:path>')
@@ -19,8 +20,12 @@ collection = db.my_collection
 posts = db.posts
 
 a_list=[]
-for post in posts.find():
+for post in posts.find({"category":"duong pho"}):
     a_list.append(Article(post["title"], post["content"], post ["image"]))
+
+b_list=[]
+for post in posts.find({"category":"bon phuong"}):
+    b_list.append(Article(post["title"], post["content"], post ["image"]))
 
 @app.route('/article/<int:article_idx>')
 def get_article_from_idx(article_idx ):
@@ -41,6 +46,10 @@ def index():
 @app.route("/list")
 def new():
     return render_template("list.html", a_list=a_list)
+
+@app.route("/bon_phuong")
+def bon_phuong():
+    return render_template("list.html", a_list = b_list)
 
 if __name__ == '__main__':
     app.run()
