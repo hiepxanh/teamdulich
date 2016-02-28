@@ -39,10 +39,21 @@ def get_content(bs):
                 break
     return post_content
 
+def get_image(bs): # chi lay cai anh thu 2
+    i = 0
+    for link in bs.find_all('img'):
+        #print (link.get('src'))
+        if i == 1:
+            #print (link.get('src'))
+            return link.get('src')
+        else:
+            None
+        i += 1
+
 if __name__ == '__main__':
     url = "http://toidi.net/tag/quan-an-ngon/"
     file_name = "toidi_amthuc.html"
-    download_webpage(url, file_name = "toidi_amthuc.html")
+    #download_webpage(url, file_name = "toidi_amthuc.html")
     open_file = open(file_name, "rb")
     identify= "post-4116"
     decoded_content = open_file.read().decode("utf-8")
@@ -61,9 +72,11 @@ if __name__ == '__main__':
         toidi_article = BeautifulSoup (decoded_article_content, "html.parser")
         title = get_post_title(toidi_article)
         post_content = get_content(toidi_article)
+        first_img = get_image (toidi_article)
         post_dict = {
             "title" : title,
-            "content" : post_content
+            "content" : post_content,
+            "image" : first_img
         }
         post_contents.append(post_dict)
         i= i + 1

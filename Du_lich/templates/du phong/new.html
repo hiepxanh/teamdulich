@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment  6</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Article_index.css') }}"/>
+	<style>p.outset {border-style: outset;}</style>
+	<script src="{{ url_for('static', filename='js/jquery-1.12.0.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</head>
+<body>
+	<div class="header">
+		<div class = "header_menu">
+			<button class="header_menu_button">YOUR MENU</button>
+			  <div class="header_menu-content">
+				<a href="#">Ẩm thực đường phố</a>
+				<a href="#">Ẩm thực truyền thống</a>
+				<a href="#">Món ngon bốn phương</a>
+			  </div>
+		</div>
+		<div class="header_logo">
+			<img src="imgs/logo.png" alt=""></img>
+		</div>
+		<div  class="header_slogan">
+				<p>C4E.2 - Code for everyone</p>
+		</div>
+		<div class="header_search" id="abc">
+				<img src="imgs/search.png"/>
+				<div class="header_search_frame">
+					<input id="Search" type ="text"/>
+				</div>
+		</div>
+		</div>
+	<div class="banner">
+		<img src="imgs/mocchau1.jpg"/>
+	</div>
+	<div class="collection" >
+		<div class="collection_1">
+			<a> <font  font face="Palatino Linotype" color="#E0EEE0">Ẩm thực đường phố</font>  </a>
+		</div>
+		<div class="collection_2">
+			<a> <font  font face="Palatino Linotype" color="#E0EEE0">Ẩm thực truyền thống</font>  </a>
+		</div>
+		<div class="collection_3">
+			<a> <font  font face="Palatino Linotype" color="#E0EEE0">Món ngon bốn phương</font>  </a>
+		</div>
+	</div>
+	<div class="article">
+		<img class="side-img" src="Chemocchau.jpg"><a href="/article/<int:article_idx>"></a></img>
+		<div class="side-text">
+		
+		
