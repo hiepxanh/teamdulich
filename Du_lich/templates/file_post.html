@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Assignment  6</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index2.css') }}"/>
 	<style>p.outset {border-style: outset;}</style>
 	<script src="{{ url_for('static', filename='js/jquery-1.12.0.min.js') }}"></script>
 	<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
@@ -54,17 +54,14 @@
 				<div class="news_info">
 					<p>Infomation</p>
 					<ul>
-						<li>Authors</li>
-						<li>Time Post</li>
-						<li>Source</li>
+						<li class="head-list">Authors</li>
+						<li class="head-list">Time Post</li>
+						<li class="head-list">Source</li>
 					</ul>
 				</div>
 			</div>
 			<div class="news_main">
 					<div class="news_main_left">
-						<div style="square" class="news_img">
-							<img src="http://megafun.vn/dataimages/201205/original/images722954_Che_2.jpg"></img>
-						</div>
 						<div style="square" class="news_content">
 
                             {{Article.content | safe}}
