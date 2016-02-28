@@ -94,6 +94,6 @@ if __name__ == '__main__':
         post_contents.append(post_dict)
         i= i + 1
 
-posts.insert_many(post_contents)777777
+posts.insert_many(post_contents)
 for bai_viet in posts.find({"category":"bon phuong"}):
     print(bai_viet['category'])
