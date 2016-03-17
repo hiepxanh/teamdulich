@@ -9,9 +9,9 @@ def download_webpage(url, file_name = "data.html"):
     file.write(r.data)
     file.close()
 
-url = "http://toidi.net/am-thuc-2/mon-ngon-sai-gon.html"
-file_name = "thughiem.html"
-#download_webpage(url, file_name)
+url = "http://blogdulich.vn/am-thuc"
+file_name = "blogdulich.html"
+download_webpage(url, file_name)
 open_file = open(file_name, "rb")
 
 decoded_content = open_file.read().decode("utf-8")
@@ -22,13 +22,13 @@ import re
 def get_image(hiep):
     i = 0
     for link in soup.find_all('img'):
-        #print (link.get('src'))
-        if i == 1: # chi lay cai anh thu 2
-            #print (link.get('src'))
-            return link.get('src')
-        else:
-            None
-        i += 1
+        print (link.get('src'))
+        # if i == 1: # chi lay cai anh thu 2
+        #     #print (link.get('src'))
+        #     return link.get('src')
+        # else:
+        #     None
+        # i += 1
 
 print (get_image(soup))
 

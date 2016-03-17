@@ -24,32 +24,38 @@ for post in posts.find({"category":"duong pho"}):
     a_list.append(Article(post["title"], post["content"], post ["image"]))
 
 b_list=[]
-for post in posts.find({"category":"bon phuong"}):
+for post in posts.find({"category":"truyen thong"}):
     b_list.append(Article(post["title"], post["content"], post ["image"]))
+
+c_list=[]
+for post in posts.find({"category":"bon phuong"}):
+    c_list.append(Article(post["title"], post["content"], post ["image"]))
+
+
+@app.route("/")
+def index():
+    return render_template("list.html", a_list=a_list)
+
+@app.route("/home")
+def home():
+    return render_template("index.html")
+
+@app.route("/duong_pho")
+def duong_pho():
+    return render_template("list.html", a_list=a_list)
+
+@app.route("/truyen_thong")
+def truyen_thong():
+    return render_template("list.html", a_list=b_list)
+
+@app.route("/bon_phuong")
+def bon_phuong():
+    return render_template("list.html", a_list = c_list)
 
 @app.route('/article/<int:article_idx>')
 def get_article_from_idx(article_idx ):
     #return str.format("you just query article {0}", article_idx)
     return render_template("file_post.html", Article = a_list[article_idx])
-
-
-
-
-@app.route("/")
-def index():
-    return render_template("index.html")
-
-# @app.route("/nohome")
-# def home():
-#     return render_template("tes.html")
-
-@app.route("/list")
-def new():
-    return render_template("list.html", a_list=a_list)
-
-@app.route("/bon_phuong")
-def bon_phuong():
-    return render_template("list.html", a_list = b_list)
 
 if __name__ == '__main__':
     app.run()
